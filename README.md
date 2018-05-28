@@ -1,5 +1,5 @@
-# Maven NAR packaging for Catch2
-Platform-independent (noarch) NAR packaging for Catch2.
+# Maven NAR packaging for Catch
+Platform-independent (noarch) NAR packaging for Catch.
 
 Catch stands for C++ Automated Test Cases in a Header and is a multi-paradigm test framework for C++.
 
@@ -19,6 +19,7 @@ Simply add the dependency to your Maven NAR like so :
 <dependency>
   <groupId>com.github.cern</groupId>
   <artifactId>narlibs-catch</arifactId>
+  <version>[2.0.0,)</version>
   <type>nar</type>
 </dependency>
 ```
