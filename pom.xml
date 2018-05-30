@@ -37,7 +37,7 @@
             <configuration>
               <tasks>
                 <mkdir dir="${project.build.directory}"/>
-                <get src="${catch.upstream.baseurl}/v${project.version}/catch.hpp" dest="${project.basedir}/src/nar/resources/noarch/include"/>
+                <get src="${catch.upstream.baseurl}/v${project.version}/catch.hpp" dest="${project.basedir}/src/nar/resources/noarch/include/catch.hpp"/>
               </tasks>
             </configuration>
             <goals>
