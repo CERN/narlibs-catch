@@ -24,12 +24,23 @@
   </distributionManagement>
     
   <properties>
-    <catch.upstream.version>${project.version}</catch.upstream.version>
-    <catch.upstream.baseurl>https://github.com/catchorg/Catch2/releases/download/</catch.upstream.baseurl>
+    <catch.upstream.version>${version.unsnapshot}</catch.upstream.version>
+    <catch.upstream.baseurl>https://github.com/catchorg/Catch2/releases/download</catch.upstream.baseurl>
   </properties>
   <build>
     <plugins>
       <plugin>
+         <groupId>com.jamesward</groupId>
+         <artifactId>unsnapshot-maven-plugin</artifactId>
+         <version>0.2</version>
+         <executions>
+             <execution>
+                 <phase>initialize</phase>
+                 <goals><goal>unsnapshot</goal></goals>
+             </execution>
+         </executions>
+    </plugin>
+     <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
         <executions>
           <execution>
@@ -37,7 +48,7 @@
             <configuration>
               <tasks>
                 <mkdir dir="${project.build.directory}"/>
-                <get src="${catch.upstream.baseurl}/v${project.version}/catch.hpp" dest="${project.basedir}/src/nar/resources/noarch/include/catch.hpp"/>
+                <get src="${catch.upstream.baseurl}/v${catch.upstream.version}/catch.hpp" dest="${project.basedir}/src/nar/resources/noarch/include/catch.hpp"/>
               </tasks>
             </configuration>
             <goals>
