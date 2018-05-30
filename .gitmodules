@@ -1,3 +1,3 @@
 [submodule "travis-utils"]
 	path = travis-utils
-	url = ssh://git@github.com/CERN/travis-utils
+	url = https://github.com/CERN/travis-utils
