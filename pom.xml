@@ -77,7 +77,7 @@
                 <gpg.defaultKeyring>false</gpg.defaultKeyring>
                 <gpg.publicKeyring>${env.GPG_DIR}/pubring.gpg</gpg.publicKeyring>
                 <gpg.secretKeyring>${env.GPG_DIR}/secring.gpg</gpg.secretKeyring>
-                <github.username>${env.GITHUB_USERNAME}</github.token>
+                <github.username>${env.GITHUB_USERNAME}</github.username>
                 <github.token>${env.GITHUB_TOKEN}</github.token>
             </properties>
           <scm>
