@@ -39,14 +39,14 @@
   <scm>
     <url>https://github.com/CERN/narlibs-catch</url>
     <connection>scm:git:https://github.com/CERN/narlibs-catch.git</connection>
-    <developerConnection>${scm.developperConnection.prop}</developerConnection>
+    <developerConnection>scm:git:https://github.com/CERN/narlibs-catch.git</developerConnection>
     <tag>catch-2.2.2</tag>
   </scm>
     
   <properties>
     <catch.upstream.version>${version.unsnapshot}</catch.upstream.version>
     <catch.upstream.baseurl>https://github.com/catchorg/Catch2/releases/download</catch.upstream.baseurl>
-    <scm.developperConnection.prop>scm:git:git@github.com/CERN/narlibs-catch.git</scm.developperConnection.prop>
+    <project.scm.id>github</project.scm.id>
   </properties>
   
   <build>
@@ -70,7 +70,7 @@
             <configuration>
               <tasks>
                 <mkdir dir="${project.build.directory}" />
-                <get src="${catch.upstream.baseurl}/v${catch.upstream.version}/catch.hpp" dest="${project.basedir}/src/nar/resources/noarch/include/catch.hpp" />
+                <get src="${catch.upstream.baseurl}/v${catch.upstream.version}/catch.hpp" dest="${project.basedir}/src/nar/resources/noarch/include/catch.hpp" usetimestamp="true"/>
               </tasks>
             </configuration>
             <goals>
@@ -105,9 +105,6 @@
                 <gpg.defaultKeyring>false</gpg.defaultKeyring>
                 <gpg.publicKeyring>${env.GPG_DIR}/pubring.gpg</gpg.publicKeyring>
                 <gpg.secretKeyring>${env.GPG_DIR}/secring.gpg</gpg.secretKeyring>
-                <github.username>${env.GITHUB_USERNAME}</github.username>
-                <github.token>${env.GITHUB_TOKEN}</github.token>
-                <scm.developperConnection.prop>scm:git:https://${github.username}:${github.token}@github.com/CERN/narlibs-catch.git</scm.developperConnection.prop>
             </properties>
             <activation>
                 <property>
