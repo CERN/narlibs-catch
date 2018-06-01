@@ -27,3 +27,4 @@ Simply add the dependency to your Maven NAR like so :
 Note that Catch v2+ requires C++ 11  (e.g. for GCC you need the option -std=c++11).
 For working examples, please consult https://github.com/CERN/narlibs-catch/tree/master/examples/
 
+
