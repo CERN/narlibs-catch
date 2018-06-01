@@ -6,21 +6,50 @@
   <groupId>com.github.cern.narlibs</groupId>
   <artifactId>catch</artifactId>
   <packaging>nar</packaging>
-  <version>2.2.2</version>
+  <version>2.2.2-SNAPSHOT</version>
 
   <description>Catch NAR packaging</description>
+  
+  <organization>
+    <name>CERN</name>
+    <url>http://home.cern</url>
+  </organization>
+  
+  <licenses>
+      <license>
+        <name>MIT License</name>
+        <url>https://opensource.org/licenses/MIT</url>
+        <distribution>repo</distribution>
+      </license>
+    </licenses>
+  <developers>
+    <developer>
+      <id>cern-github-bot</id>
+      <name>CERN Github Bot</name>
+      <email>cern-github-bot@cern.ch</email>
+      <url>http://home.cern</url>
+      <organization>CERN</organization>
+      <organizationUrl>http://home.cern</organizationUrl>
+      <roles>
+        <role>bot</role>
+      </roles>
+      <timezone>CEST</timezone>
+    </developer>
+  </developers>
   
   <scm>
     <url>https://github.com/CERN/narlibs-catch</url>
     <connection>scm:git:https://github.com/CERN/narlibs-catch.git</connection>
-    <developerConnection>scm:git:git@github.com/CERN/narlibs-catch.git</developerConnection>
+    <developerConnection>${scm.developperConnection.prop}</developerConnection>
     <tag>HEAD</tag>
   </scm>
     
   <properties>
     <catch.upstream.version>${version.unsnapshot}</catch.upstream.version>
     <catch.upstream.baseurl>https://github.com/catchorg/Catch2/releases/download</catch.upstream.baseurl>
+    <scm.developperConnection.prop>scm:git:git@github.com/CERN/narlibs-catch.git</scm.developperConnection.prop>
   </properties>
+  
   <build>
     <plugins>
       <plugin>
@@ -79,10 +108,8 @@
                 <gpg.secretKeyring>${env.GPG_DIR}/secring.gpg</gpg.secretKeyring>
                 <github.username>${env.GITHUB_USERNAME}</github.username>
                 <github.token>${env.GITHUB_TOKEN}</github.token>
+                <scm.developperConnection.prop>scm:git:https://${github.username}:${github.token}@github.com/CERN/narlibs-catch.git</scm.developperConnection.prop>
             </properties>
-          <scm>
-            <developerConnection>scm:git:https://${github.username}:${github.token}@github.com/CERN/narlibs-catch.git</developerConnection>
-          </scm>
             <activation>
                 <property>
                     <name>performRelease</name>
