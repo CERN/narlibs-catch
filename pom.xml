@@ -8,6 +8,7 @@
   <version>2.2.2-SNAPSHOT</version>
 
   <description>Catch NAR packaging</description>
+  <url>https://github.com/CERN/narlibs-catch</url>
   
   <organization>
     <name>CERN</name>
