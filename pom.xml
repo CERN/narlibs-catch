@@ -5,7 +5,7 @@
   <groupId>com.github.cern.narlibs</groupId>
   <artifactId>catch</artifactId>
   <packaging>nar</packaging>
-  <version>2.2.2-SNAPSHOT</version>
+  <version>2.2.2</version>
 
   <description>Catch NAR packaging</description>
   <url>https://github.com/CERN/narlibs-catch</url>
@@ -71,7 +71,7 @@
             <configuration>
               <tasks>
                 <mkdir dir="${project.build.directory}" />
-                <get src="${catch.upstream.baseurl}/v${catch.upstream.version}/catch.hpp" dest="${project.basedir}/src/nar/resources/noarch/include/catch.hpp" usetimestamp="true"/>
+                <get src="${catch.upstream.baseurl}/v${catch.upstream.version}/catch.hpp" dest="${project.basedir}/src/nar/resources/noarch/include/catch.hpp" usetimestamp="true" />
               </tasks>
             </configuration>
             <goals>
