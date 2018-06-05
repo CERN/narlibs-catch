@@ -41,7 +41,7 @@
     <url>https://github.com/CERN/narlibs-catch</url>
     <connection>scm:git:https://github.com/CERN/narlibs-catch.git</connection>
     <developerConnection>scm:git:https://github.com/CERN/narlibs-catch.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>1.x</tag>
   </scm>
     
   <properties>
