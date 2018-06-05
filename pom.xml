@@ -41,11 +41,12 @@
     <url>https://github.com/CERN/narlibs-catch</url>
     <connection>scm:git:https://github.com/CERN/narlibs-catch.git</connection>
     <developerConnection>scm:git:https://github.com/CERN/narlibs-catch.git</developerConnection>
-    <tag>catch-2.2.2</tag>
+    <tag>HEAD</tag>
   </scm>
     
   <properties>
-    <catch.upstream.version>${version.unsnapshot}</catch.upstream.version>
+    <!--catch.upstream.version>${version.unsnapshot}</catch.upstream.version-->
+    <catch.upstream.version>2.2.2</catch.upstream.version>
     <catch.upstream.baseurl>https://github.com/catchorg/Catch2/releases/download</catch.upstream.baseurl>
     <project.scm.id>github</project.scm.id>
   </properties>
