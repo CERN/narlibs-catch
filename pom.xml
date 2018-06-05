@@ -5,7 +5,7 @@
   <groupId>com.github.cern.narlibs</groupId>
   <artifactId>catch</artifactId>
   <packaging>nar</packaging>
-  <version>1.12.2-SNAPSHOT</version>
+  <version>1.12.2</version>
 
   <description>Catch NAR packaging</description>
   <url>https://github.com/CERN/narlibs-catch</url>
@@ -41,7 +41,7 @@
     <url>https://github.com/CERN/narlibs-catch</url>
     <connection>scm:git:https://github.com/CERN/narlibs-catch.git</connection>
     <developerConnection>scm:git:https://github.com/CERN/narlibs-catch.git</developerConnection>
-    <tag>1.x</tag>
+    <tag>1.12.2</tag>
   </scm>
     
   <properties>
